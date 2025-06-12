@@ -91,15 +91,18 @@ li {
 }
 
 .menu-checkbox:checked~.hamburger-menu span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(6px, 6px);
+    transition: transform 0.3s ease;
 }
 
 .menu-checkbox:checked~.hamburger-menu span:nth-child(2) {
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .menu-checkbox:checked~.hamburger-menu span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(6px, -6px);
+    transition: transform 0.3s ease;
 }
 
 /* Left nav */
@@ -245,5 +248,33 @@ li {
     .header-right .nav-bar .nav-item:nth-child(3) {
         display: none;
         /* Ẩn user và wishlist */
+    }
+
+    /* Điều chỉnh grid layout cho mobile */
+    .container-header {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .header-left {
+        padding: 0;
+        margin-right: 10px;
+    }
+
+    .logo {
+        font-size: 24px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .header-right {
+        padding: 0;
+        margin-left: 10px;
+    }
+
+    .header-right .nav-bar {
+        justify-content: center;
+        gap: 10px;
     }
 }
