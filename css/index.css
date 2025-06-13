@@ -1,6 +1,7 @@
 :root {
     --font-family-theme: "Poppins", sans-serif;
     --font-size-1: 16px;
+    --max-width-container: 1920px;
 }
 
 body {
@@ -11,6 +12,10 @@ body {
 
 li {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 .nav-bar {
@@ -29,7 +34,7 @@ li {
     align-items: center;
     height: auto;
     padding: 0 20px;
-    max-width: 1920px;
+    width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -277,4 +282,67 @@ li {
         justify-content: center;
         gap: 10px;
     }
+}
+
+/* Banner */
+.banner {
+    max-width: var(--max-width-container);
+    /* min-height: 650px; */
+    background-color: #FAF6F1;
+
+}
+
+.carousel-cell {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    background-color: #FAF6F1;
+}
+
+.carousel-cell-text {
+    position: absolute;
+    left: 218px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.carousel-cell-text .carousel-cell-collection {
+    font-family: var(--font-family-theme);
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.carousel-cell-text .carousel-cell-title {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.carousel-cell-button {
+    background-color: #222222;
+    width: 230px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-cell-button a {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.carousel-cell-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 0;
+    padding-right: -120px;
+}
+
+.carousel-cell-img img {
+    width: 70%;
+    object-fit: cover;
 }
