@@ -346,3 +346,159 @@ a {
     width: 70%;
     object-fit: cover;
 }
+
+.flickity-page-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 2;
+}
+
+/* shop by category */
+
+.shop-by-category {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.shop-by-title {
+    padding-bottom: 30px;
+}
+
+.link-list-category {
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+
+
+.list-category a {
+    color: #222222;
+}
+
+.list-category .list-image {
+    width: 270px;
+    height: 270px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.list-category .list-image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* New arrival */
+
+.arrival {
+    text-align: center;
+
+}
+
+.arrival-list {
+    width: 270px;
+    height: 270px;
+
+}
+
+.arrival-item {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.arrival-item,
+.arrival-img {
+    padding: 0;
+    margin: 0;
+}
+
+.arrival-img {
+    width: 100%;
+    position: relative;
+}
+
+.arrival-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.badge-new {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    background-color: #27CDE4;
+    display: flex;
+    justify-content: center;
+}
+
+.badge-new span {
+    font-size: 12px;
+    padding: 2px 6px 2px 6px;
+    color: #FFFFFF;
+}
+
+.quick-actions {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+
+}
+
+/* .add-to-whishlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.quick-view a,
+.add-to-whishlist a {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    background-color: #FFFFFF;
+    position: absolute;
+}
+
+.button-add a {
+    color: #000000;
+}
+
+.button-add:hover {
+    background-color: #000000;
+}
+
+.button-add a:hover {
+    color: #FFFFFF;
+}
