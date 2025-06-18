@@ -27,6 +27,12 @@ a {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
 }
 
 .header-left {
@@ -102,68 +108,184 @@ a {
 }
 
 /* Banner */
-.banner {
-    background-color: #FAF6F1;
-    overflow: hidden;
-}
-
-.container {
-    max-width: 1440px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    overflow: hidden;
-
-    @media (width: 1024px) {
-        max-width: 1024px;
-    }
-
-    @media (width: 787px) {
-        max-width: 787px;
-    }
-}
-
-
-.content-banner {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    align-items: center;
-    overflow: hidden;
-    gap: 20px;
-    position: relative;
-    z-index: 0;
-    min-height: auto;
-}
-
 .banner-text {
-    z-index: 2;
-    position: relative;
-    padding-left: 19%;
-    /* tuỳ chỉnh nếu cần đẩy chữ vào trong một chút */
-}
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
-.banner-img {
-    width: 180%;
-    overflow: hidden;
+    /* Căn giữa thật sự */
+    left: 20%;
     z-index: 1;
 }
 
-.banner-img img {
-    width: 1000%;
-    display: block;
-    margin-left: -40%;
-}
-
-.spring {
+.banner-text .spring {
     font-weight: 500;
     font-size: 16px;
-    color: #222222;
-    /* margin-bottom: 35px; */
+    padding-bottom: 24px;
 }
 
-.title-collection {
+.banner-title {
     font-weight: 700;
-    font-size: 55px;
-    white-space: nowrap;
+    font-size: 65px;
+    padding-bottom: 24px;
+}
+
+.btn-shopping a {
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 32px;
+    padding-right: 62px;
+    color: #FFFF;
+    background-color: #222222;
+}
+
+.btn-shopping a:hover {
+    background-color: #FFFFFF;
+    color: #222222;
+}
+
+.btn-shopping a:hover svg path {
+    fill: #222222;
+}
+
+.flickity-page-dots {
+    bottom: 0px;
+}
+
+
+.flickity-page-dots .dot.is-selected {
+    width: 20px;
+    height: 8px;
+    background: #000000;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .header-left {
+        margin-left: 20px;
+    }
+
+    .header-left ul li a {
+        padding-right: 25px;
+        font-size: 12px;
+    }
+
+    .header-logo img {
+        width: 90px;
+        height: 26px;
+    }
+
+    .header-right ul {
+        margin-right: 10px;
+    }
+
+    .content-banner {
+        height: auto;
+    }
+
+    .banner-text {
+        left: 13%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+    .banner-img img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+
+    .banner-text .spring {
+        font-size: 18px;
+        padding-bottom: 24px;
+    }
+
+    .banner-title {
+        font-size: 40px;
+
+    }
+
+
+
+    .btn-shopping a {
+        font-size: 14px;
+        padding: 20px 55px;
+    }
+
+    .flickity-page-dots .dot.is-selected {
+        width: 18px;
+        height: 8px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 385px) {
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+        margin-right: 10px;
+    }
+
+    .header-left {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #FFFF;
+        flex-direction: column;
+    }
+
+    .header-left ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        gap: 15px;
+    }
+
+    #toggle-menu:checked~.header-left {
+        display: flex;
+    }
+
+    .header-container {
+        grid-template-columns: auto auto 1fr;
+
+    }
+
+    .banner-text {
+        top: 50%;
+        left: 13%;
+        transform: translateY(-50%);
+        text-align: left;
+    }
+
+    .banner-title {
+        font-size: 35px;
+        padding-bottom: 8px;
+    }
+
+    .banner-text .spring {
+        font-size: 8px;
+        padding-bottom: 10px;
+    }
+
+    .btn-shopping a {
+        font-size: 10px;
+        padding: 8px 12px;
+    }
+
+    .flickity-page-dots .dot.is-selected {
+        width: 8px;
+        height: 4px;
+    }
 }
