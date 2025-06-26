@@ -107,7 +107,7 @@ a {
     font-weight: 200;
 }
 
-/* Banner */
+/* banner */
 .banner-text {
     position: absolute;
     top: 50%;
@@ -150,12 +150,13 @@ a {
     fill: #222222;
 }
 
-.flickity-page-dots {
-    bottom: 0px;
+.banner .flickity-page-dots {
+    bottom: 5%;
 }
 
 
-.flickity-page-dots .dot.is-selected {
+
+.banner .flickity-page-dots .dot.is-selected {
     width: 20px;
     height: 8px;
     background: #000000;
@@ -163,7 +164,213 @@ a {
     border-radius: 5px;
 }
 
+/* category */
+.container {
+    max-width: 1200px;
+}
 
+.title-categories {
+    padding-bottom: 40px;
+    padding-top: 120px;
+}
+
+.list-categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 120px;
+
+}
+
+
+
+.list-img img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* New Arival */
+.inner-arival.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+.inner-tilte {
+    padding-bottom: 20px;
+}
+
+.container-product .carousel-cell {
+    width: 25%;
+    gap: 20px;
+}
+
+.product-card {
+    position: relative;
+}
+
+.card-image {
+    width: 270px;
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    display: block;
+}
+
+.img-1,
+.img-2 {
+    transition: opacity 0.3s ease;
+}
+
+.img-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.img-2 {
+    opacity: 0;
+}
+
+.img-1 {
+    opacity: 1;
+}
+
+.card-image:hover .img-2 {
+    opacity: 1;
+}
+
+.card-image:hover .img-1 {
+    opacity: 0;
+}
+
+.card-title {
+    font-size: 14px;
+}
+
+.add-to-cart {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    right: 10%;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 15;
+}
+
+.add-to-cart a {
+    background-color: #fff;
+    color: #333;
+    padding: 8px 60px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.add-to-cart a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.product-card:hover .add-to-cart {
+    opacity: 1;
+}
+
+.card-price ins {
+    text-decoration: none;
+    color: #696969;
+}
+
+.card-price del {
+    color: #696969;
+}
+
+.card-price .price-sale {
+    color: #F85712;
+}
+
+.badge-group {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 20;
+}
+
+.badge-sale,
+.badge-new {
+    padding: 2px 10px;
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 3px;
+    color: #fff;
+    width: fit-content;
+}
+
+.badge-sale {
+    background-color: #F85712;
+}
+
+.badge-new {
+    background-color: #27CDE4;
+}
+
+.quick-action {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 20;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .quick-action {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.quick-view,
+.whish-list {
+    padding: 3px 6px;
+    background-color: #fff;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .whish-list {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.1s;
+}
+
+.product-card:hover .quick-view {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s;
+}
+
+.tooltip {
+    z-index: 1001;
+    font-size: 12px;
+}
 
 @media (max-width: 1024px) {
     .header-left {
@@ -222,6 +429,68 @@ a {
     .flickity-page-dots .dot.is-selected {
         width: 18px;
         height: 8px;
+    }
+
+    .container {
+        max-width: 1024px;
+    }
+
+    .list-categories {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+
+
+
+    .container-product .carousel-cell {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 50%;
+
+    }
+
+    .product-card {
+        padding-left: 45%;
+    }
+
+    .card-image {
+        width: 100vw;
+        height: 100vw;
+        width: 270px;
+        height: 270px;
+
+    }
+
+    .card-title,
+    .card-price {
+        margin-left: 50%;
+        width: 100%;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        display: block;
+
+    }
+
+    .badge-group {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        z-index: 20;
+    }
+
+    .quick-action {
+        top: 5%;
+        right: 10%;
     }
 }
 
@@ -287,5 +556,53 @@ a {
     .flickity-page-dots .dot.is-selected {
         width: 8px;
         height: 4px;
+    }
+
+    .container {
+        max-width: 385px;
+    }
+
+    .list-categories {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .list-product {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 40px;
+    }
+
+    .container-product .carousel-cell {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .card-image {
+        width: 100vw;
+        height: 100vw;
+        width: 270px;
+        height: 270px;
+        margin-left: 25%;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        display: block;
+
+    }
+
+    .badge-group {
+        position: absolute;
+        top: 5%;
+        left: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        z-index: 20;
     }
 }
