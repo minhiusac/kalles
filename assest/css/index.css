@@ -152,6 +152,7 @@ a {
 
 .banner .flickity-page-dots {
     bottom: 5%;
+
 }
 
 
@@ -192,6 +193,11 @@ a {
 }
 
 /* New Arival */
+.arrival {
+    padding-top: 120px;
+    margin-bottom: 120px;
+}
+
 .inner-arival.carousel {
     width: 100%;
     overflow: hidden;
@@ -372,6 +378,25 @@ a {
     font-size: 12px;
 }
 
+/* Banner Product */
+.banner-product .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.container-product-trending {
+    display: flex;
+    gap: 20px;
+}
+
+.container-product-trending .carousel-cell {
+    width: 25%;
+    gap: 20px;
+
+}
+
 @media (max-width: 1024px) {
     .header-left {
         margin-left: 20px;
@@ -441,8 +466,10 @@ a {
         gap: 20px;
     }
 
-
-
+    .arrival {
+        padding-top: 80px;
+        margin-bottom: 80px;
+    }
 
     .container-product .carousel-cell {
         display: grid;
@@ -492,6 +519,14 @@ a {
         top: 5%;
         right: 10%;
     }
+
+    .container-product-trending .carousel-cell {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 50%;
+
+    }
+
 }
 
 /* Mobile */
@@ -573,6 +608,11 @@ a {
         margin-bottom: 40px;
     }
 
+    .arrival {
+        padding-top: 40px;
+        margin-bottom: 40px;
+    }
+
     .container-product .carousel-cell {
         display: grid;
         grid-template-columns: 1fr;
@@ -604,5 +644,11 @@ a {
         flex-direction: column;
         gap: 5px;
         z-index: 20;
+    }
+
+    .container-product-trending .carousel-cell {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
     }
 }
