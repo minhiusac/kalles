@@ -520,11 +520,18 @@ a {
         right: 10%;
     }
 
-    .container-product-trending .carousel-cell {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 50%;
+    .container-product-trending {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 
+    .container-product-trending .carousel-cell {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        /* Xóa grid ở đây */
     }
 
 }
@@ -646,9 +653,23 @@ a {
         z-index: 20;
     }
 
-    .container-product-trending .carousel-cell {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
+    /* .container-product-trending {
+        display: flex;
+        flex-direction: column;
     }
+
+    .container-product-trending .carousel-cell {
+        max-width: 100%;
+        width: 100%;
+    } */
+
+    /* 
+    .container-product-trending .carousel-cell .product-card {
+        margin-left: -45%;
+        position: relative;
+        width: 270px;
+        background: #fff;
+    } */
+
+
 }
